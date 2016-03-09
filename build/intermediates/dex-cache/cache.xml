@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/marielawhaley/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-4f6f7951e84c77df6dc16c2038931ec8503ae007.jar" />
+    </item>
+    <item
         jar="/Users/marielawhaley/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.0.2/11752d3f24d1a9deda4533a7ca18d8496417ceeb/org.eclipse.paho.client.mqttv3-1.0.2.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -9,11 +16,11 @@
         <dex dex="/Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/build/intermediates/pre-dexed/debug/org.eclipse.paho.client.mqttv3-1.0.2-50b1780a9b9e3bc2ea9adf4e1954c20064f6aac5.jar" />
     </item>
     <item
-        jar="/Users/marielawhaley/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jar="/Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/libs/mpandroidchartlibrary-2-1-6.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-4f6f7951e84c77df6dc16c2038931ec8503ae007.jar" />
+        sha1="3f8beaf2f9b5357717e0b1ef9f6820e517784ea1">
+        <dex dex="/Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/build/intermediates/pre-dexed/debug/mpandroidchartlibrary-2-1-6-3f4eaf1ee1438fd6d1e4786fde6ee5aaeb2c8138.jar" />
     </item>
 
 </items>

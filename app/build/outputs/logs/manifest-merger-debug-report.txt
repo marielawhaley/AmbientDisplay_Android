@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:2:1-41:12
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:2:1-47:12
 	xmlns:android
 		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -39,31 +39,45 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:15:5-79
 	android:name
 		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:15:22-76
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:17:5-83
+	android:name
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:17:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:18:5-88
+	android:name
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:18:30-85
 application
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:20:5-39:19
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:23:5-45:19
 	android:label
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:23:9-41
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:26:9-41
 	android:allowBackup
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:24:9-35
 	android:icon
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:22:9-45
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:25:9-45
 	android:theme
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:24:9-40
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:27:9-40
 service#org.eclipse.paho.android.service.MqttService
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:27:9-28:19
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:30:9-31:19
 	android:name
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:27:18-77
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:30:18-45
 activity#org.eclipse.paho.android.service.MainActivity
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:31:9-37:20
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:34:9-40:20
 	android:name
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:31:19-47
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:34:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:32:13-36:29
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:33:17-69
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:33:25-66
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:35:17-77
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:35:27-74
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:38:27-74
+activity#org.eclipse.paho.android.service.Temperature
+ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:41:9-44:20
+	android:label
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:43:13-63
+	android:name
+		ADDED from /Users/marielawhaley/MQTT_Android/AndroidMQTTDemo-master/app/src/main/AndroidManifest.xml:42:13-40
