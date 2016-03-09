@@ -23,6 +23,7 @@ public class Model {
             hourlyLight[i] =0;
         }
 
+
     }
 
     public void setHourlyHumidity(float[] hourlyHumidity) {

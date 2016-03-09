@@ -16,6 +16,7 @@
 
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <!--
  <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -41,6 +42,16 @@
         <activity
             android:name=".Temperature"
             android:label="@string/title_activity_temperature" >
+        </activity>
+        <activity
+            android:name=".Dust"
+            android:label="@string/title_activity_dust" >
+        </activity>
+        <activity android:name=".Noise" >
+        </activity>
+        <activity
+            android:name=".Light"
+            android:label="@string/title_activity_light" >
         </activity>
     </application>
 

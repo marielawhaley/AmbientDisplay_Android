@@ -43,6 +43,16 @@
             android:name="org.eclipse.paho.android.service.Temperature"
             android:label="@string/title_activity_temperature" >
         </activity>
+        <activity
+            android:name="org.eclipse.paho.android.service.Dust"
+            android:label="@string/title_activity_dust" >
+        </activity>
+        <activity android:name="org.eclipse.paho.android.service.Noise" >
+        </activity>
+        <activity
+            android:name="org.eclipse.paho.android.service.Light"
+            android:label="@string/title_activity_light" >
+        </activity>
     </application>
 
 </manifest>

@@ -106,6 +106,8 @@ IBM Corp.
     <string name="sslKeyLocaltion">file://</string>
     <string name="select">select</string>
     <string name="title_activity_temperature">Temperature</string>
+    <string name="title_activity_dust">Dust</string>
+    <string name="title_activity_light">Light</string>
     
 
 </resources>

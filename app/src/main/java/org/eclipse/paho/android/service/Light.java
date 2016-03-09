@@ -22,7 +22,7 @@ import org.eclipse.paho.android.service.R;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Temperature extends Activity {
+public class Light extends Activity {
 
     LineChart chart;
     private GestureDetector gestureDetector;
@@ -34,7 +34,7 @@ public class Temperature extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperature);
+        setContentView(R.layout.activity_light);
         setBarData();
         context = this.getApplicationContext();
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
@@ -49,9 +49,9 @@ public class Temperature extends Activity {
 
     private void setBarData()
     {
-        setContentView(R.layout.activity_temperature);
+        setContentView(R.layout.activity_light);
         //BarChart chart = (BarChart) findViewById(R.id.chart);
-        chart = (LineChart) findViewById(R.id.temperature_chart);
+        chart = (LineChart) findViewById(R.id.light_chart);
         chart.setVisibility(View.VISIBLE);
 
 
@@ -63,7 +63,7 @@ public class Temperature extends Activity {
         chart.setData(data);
         chart.setScaleEnabled(true);
         chart.animateXY(1500, 1500);
-        
+
 
 
     }
@@ -71,10 +71,10 @@ public class Temperature extends Activity {
     private LineDataSet getDataSet()
     {
         ArrayList<LineDataSet> dataSets = null;
-        float [] hourlyTemperature =   MainActivity.model.getHourlyTemperature();
+        float [] hourlyLight =   MainActivity.model.getHourlyLight();
         for(int i = 0; i <12 ; i++)
         {
-             hourlyTemperature[i] = (float)21.1;
+            hourlyLight[i] = (float)21.1;
         }
 
         ArrayList<Entry> valueSet = new ArrayList<>();
@@ -82,11 +82,11 @@ public class Temperature extends Activity {
         // set data set for first device
         for(int i = 0; i< 12; i++ )
         {
-            valueSet.add(new Entry (hourlyTemperature[i], i));
+            valueSet.add(new Entry (hourlyLight[i], i));
         }
 
 
-        LineDataSet barDataSet1 = new LineDataSet(valueSet,"Temperature");
+        LineDataSet barDataSet1 = new LineDataSet(valueSet,"Light");
 
         barDataSet1.setColor(Color.BLUE);
 
@@ -131,7 +131,7 @@ public class Temperature extends Activity {
                 // right to left swipe
                 if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
                     Toast.makeText(context, "Left Swipe", Toast.LENGTH_SHORT).show();
-                    Intent graphIntent = new Intent(context, Dust.class);
+                    Intent graphIntent = new Intent(context, MainActivity.class);
                     startActivity(graphIntent);
 
                 } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {

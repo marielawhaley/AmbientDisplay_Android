@@ -12,18 +12,17 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+
 
 import org.eclipse.paho.android.service.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Temperature extends Activity {
-
+public class Noise extends Activity {
     LineChart chart;
     private GestureDetector gestureDetector;
     private static final int SWIPE_MIN_DISTANCE = 120;
@@ -34,9 +33,10 @@ public class Temperature extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperature);
-        setBarData();
+        setContentView(R.layout.activity_noise);
+
         context = this.getApplicationContext();
+        setBarData();
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
     }
 
@@ -49,9 +49,9 @@ public class Temperature extends Activity {
 
     private void setBarData()
     {
-        setContentView(R.layout.activity_temperature);
+        setContentView(R.layout.activity_noise);
         //BarChart chart = (BarChart) findViewById(R.id.chart);
-        chart = (LineChart) findViewById(R.id.temperature_chart);
+        chart = (LineChart) findViewById(R.id.noise_chart);
         chart.setVisibility(View.VISIBLE);
 
 
@@ -63,18 +63,15 @@ public class Temperature extends Activity {
         chart.setData(data);
         chart.setScaleEnabled(true);
         chart.animateXY(1500, 1500);
-        
-
-
     }
 
     private LineDataSet getDataSet()
     {
         ArrayList<LineDataSet> dataSets = null;
-        float [] hourlyTemperature =   MainActivity.model.getHourlyTemperature();
+        float [] hourlyNoise =   MainActivity.model.getHourlyNoise();
         for(int i = 0; i <12 ; i++)
         {
-             hourlyTemperature[i] = (float)21.1;
+            hourlyNoise[i] = (float)21.1;
         }
 
         ArrayList<Entry> valueSet = new ArrayList<>();
@@ -82,13 +79,13 @@ public class Temperature extends Activity {
         // set data set for first device
         for(int i = 0; i< 12; i++ )
         {
-            valueSet.add(new Entry (hourlyTemperature[i], i));
+            valueSet.add(new Entry (hourlyNoise[i], i));
         }
 
 
-        LineDataSet barDataSet1 = new LineDataSet(valueSet,"Temperature");
+        LineDataSet barDataSet1 = new LineDataSet(valueSet,"Noise");
 
-        barDataSet1.setColor(Color.BLUE);
+        barDataSet1.setColor(Color.MAGENTA);
 
         dataSets = new ArrayList<>();
         dataSets.add(barDataSet1);
@@ -120,7 +117,6 @@ public class Temperature extends Activity {
 
         return xAxis;
     }
-
     class MyGestureDetector extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
@@ -131,7 +127,7 @@ public class Temperature extends Activity {
                 // right to left swipe
                 if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
                     Toast.makeText(context, "Left Swipe", Toast.LENGTH_SHORT).show();
-                    Intent graphIntent = new Intent(context, Dust.class);
+                    Intent graphIntent = new Intent(context, Light.class);
                     startActivity(graphIntent);
 
                 } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
@@ -151,4 +147,6 @@ public class Temperature extends Activity {
     }
 
 
+
 }
+
