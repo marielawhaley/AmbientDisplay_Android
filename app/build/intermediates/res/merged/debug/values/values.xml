@@ -72,11 +72,13 @@
     <string name="timestamp">&lt;br/> &lt;small> %1$s &lt;/small></string>
     <string name="title_activity_advanced">Advanced</string>
     <string name="title_activity_connection_details">Connection Details</string>
+    <string name="title_activity_deskegg">Desk Egg</string>
     <string name="title_activity_dust">Dust</string>
     <string name="title_activity_history">History</string>
     <string name="title_activity_last_will">Last Will Message</string>
     <string name="title_activity_light">Light</string>
     <string name="title_activity_new_connection">New Connection</string>
+    <string name="title_activity_noise">Noise</string>
     <string name="title_activity_publish">Publish</string>
     <string name="title_activity_subscribe">Subscribe</string>
     <string name="title_activity_temperature">Temperature</string>

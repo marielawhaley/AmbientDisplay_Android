@@ -108,6 +108,11 @@ IBM Corp.
     <string name="title_activity_temperature">Temperature</string>
     <string name="title_activity_dust">Dust</string>
     <string name="title_activity_light">Light</string>
-    
+    <string name="title_activity_noise">Noise</string>
+    <string name="title_activity_deskegg">Desk Egg</string>
+
+
+
+
 
 </resources>

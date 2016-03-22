@@ -32,7 +32,9 @@
         </service>
 
         <!-- Main Activity -->
-        <activity android:name="org.eclipse.paho.android.service.MainActivity" >
+        <activity
+            android:name="org.eclipse.paho.android.service.MainActivity"
+            android:label="@string/title_activity_deskegg" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,7 +49,9 @@
             android:name="org.eclipse.paho.android.service.Dust"
             android:label="@string/title_activity_dust" >
         </activity>
-        <activity android:name="org.eclipse.paho.android.service.Noise" >
+        <activity
+            android:name="org.eclipse.paho.android.service.Noise"
+            android:label="@string/title_activity_noise" >
         </activity>
         <activity
             android:name="org.eclipse.paho.android.service.Light"

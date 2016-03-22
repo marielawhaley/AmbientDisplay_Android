@@ -32,7 +32,8 @@
         </service>
 
         <!-- Main Activity -->
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity"
+            android:label="@string/title_activity_deskegg" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,7 +48,9 @@
             android:name=".Dust"
             android:label="@string/title_activity_dust" >
         </activity>
-        <activity android:name=".Noise" >
+        <activity android:name=".Noise"
+            android:label="@string/title_activity_noise" >
+
         </activity>
         <activity
             android:name=".Light"

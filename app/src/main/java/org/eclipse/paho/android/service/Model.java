@@ -5,16 +5,16 @@ package org.eclipse.paho.android.service;
  */
 public class Model {
 
-    private float []hourlyTemperature = new float[24];
-    private float[] hourlyHumidity = new float[24];
-    private float[] hourlyDust = new float[24];
-    private float[] hourlyNoise = new float[24];
-    private float[] hourlyLight = new float[24];
+    private float []hourlyTemperature = new float[8];
+    private float[] hourlyHumidity = new float[8];
+    private float[] hourlyDust = new float[8];
+    private float[] hourlyNoise = new float[8];
+    private float[] hourlyLight = new float[8];
 
     public Model()
     {
         //Defaults
-        for(int i = 0; i<24; i++)
+        for(int i = 0; i<8; i++)
         {
             hourlyTemperature[i] = 0;
             hourlyHumidity[i] = 0;
@@ -22,8 +22,6 @@ public class Model {
             hourlyNoise[i] = 0;
             hourlyLight[i] =0;
         }
-
-
     }
 
     public void setHourlyHumidity(float[] hourlyHumidity) {

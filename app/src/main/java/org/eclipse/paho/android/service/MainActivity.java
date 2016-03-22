@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import org.eclipse.paho.android.service.R;
@@ -27,7 +29,7 @@ import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends Activity {
     private int qos =1;
-    private String topic = "mbed-sample";
+    private String topic = "AD/#";
     Context context ;
     public static Model model;
 
@@ -35,6 +37,7 @@ public class MainActivity extends Activity {
     private static final int SWIPE_MAX_OFF_PATH = 250;
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     private GestureDetector gestureDetector;
+    private RelativeLayout eyeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +46,32 @@ public class MainActivity extends Activity {
         context = this.getApplicationContext();
 
         model = new Model();
-        MqttInterface mqtt = new MqttInterface(context);
+         MqttInterface mqtt = new MqttInterface(context);
         mqtt.MqttAction("Subscribe", topic, "null");
 
+        //MqttInterface mqtt2 = new MqttInterface(context);
+        //mqtt2.MqttAction("Publish","AD/UI-server/request", "lala");
 
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
+
+        Thread welcomeThread = new Thread() {
+            @Override
+        public void run() {
+            try {
+                super.run();
+                sleep(8000);  //Delay of 6 seconds
+
+            } catch (Exception e) {
+
+            } finally {
+
+                Intent i = new Intent(context, Temperature.class);
+                startActivity(i);
+                finish();
+            }
+        }
+    };
+    welcomeThread.start();
     }
 
     public boolean onTouchEvent(MotionEvent ev) {

@@ -36,9 +36,48 @@ public class MqttInterface {
 
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context, topic + " " + message, duration);
-                toast.show();
+                Log.i("MQTT INTERFACE", "message Arrived");
+
+                String mssgString;
+                mssgString = message.toString();
+                String[] data = mssgString.split(",");
+                float [] value =  new float[data.length];
+                for (int i= 0; i <data.length; ++i)
+                {
+                    float number = Float.parseFloat(data[i]);
+                    float rounded = (int) Math.round(number * 1000) / 1000f;
+                    value[i] = rounded;
+                }
+
+                if (topic.contentEquals("AD/server-UI/history/temp"))
+                {
+
+                    MainActivity.model.setHourlyTemperature(value);
+                }
+                else if (topic.contentEquals("AD/server-UI/history/dew_point"))
+                {
+                  MainActivity.model.setHourlyHumidity(value);
+
+                }
+                else if (topic.contentEquals("AD/server-UI/history/dust"))
+                {
+                  MainActivity.model.setHourlyDust(value);
+                }
+                else if (topic.contentEquals("AD/server-UI/history/noise"))
+                {
+                    MainActivity.model.setHourlyNoise(value);
+
+                }
+                else if (topic.contentEquals("AD/server-UI/history/light"))
+                {
+                    MainActivity.model.setHourlyLight(value);
+
+                }
+                else if(topic.contentEquals("AD/server-UI/feedback"))
+                {
+
+                }
+
             }
 
             @Override
@@ -68,7 +107,6 @@ public class MqttInterface {
                     {
                         publish(  topicAction,  message);
                     }
-
                 }
 
                 @Override
@@ -93,7 +131,7 @@ public class MqttInterface {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
                     Log.i("Main Activity", "Subscribed");
-
+                    publish("AD/UI-server/request", "lala");
                 }
 
                 @Override
