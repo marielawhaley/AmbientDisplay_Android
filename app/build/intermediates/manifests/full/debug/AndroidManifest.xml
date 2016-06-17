@@ -23,7 +23,7 @@
     -->
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/desk_egg_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
@@ -56,6 +56,10 @@
         <activity
             android:name="org.eclipse.paho.android.service.Light"
             android:label="@string/title_activity_light" >
+        </activity>
+        <activity
+            android:name="org.eclipse.paho.android.service.LiveValues"
+            android:label="Live Data" >
         </activity>
     </application>
 

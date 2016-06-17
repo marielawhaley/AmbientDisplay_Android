@@ -10,9 +10,14 @@ public class Model {
     private float[] hourlyDust = new float[8];
     private float[] hourlyNoise = new float[8];
     private float[] hourlyLight = new float[8];
+    private float[] liveValues = new float[5];
 
     public Model()
     {
+        for (int j = 0 ; j<5 ; j++)
+        {
+         liveValues[j] = 0;
+        }
         //Defaults
         for(int i = 0; i<8; i++)
         {
@@ -22,6 +27,10 @@ public class Model {
             hourlyNoise[i] = 0;
             hourlyLight[i] =0;
         }
+    }
+    public void setLiveValues(float[] liveValues)
+    {
+        this.liveValues = liveValues; // temperature, humidity, dust, noise, light
     }
 
     public void setHourlyHumidity(float[] hourlyHumidity) {
@@ -44,6 +53,10 @@ public class Model {
         this.hourlyTemperature = hourlyTemperature;
     }
 
+    public float[] getLiveValues()
+    {
+        return liveValues;
+    }
     public float[] getHourlyDust() {
         return hourlyDust;
     }

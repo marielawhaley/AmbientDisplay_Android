@@ -48,7 +48,6 @@ public class MqttInterface {
                     float rounded = (int) Math.round(number * 1000) / 1000f;
                     value[i] = rounded;
                 }
-
                 if (topic.contentEquals("AD/server-UI/history/temp"))
                 {
 
@@ -75,9 +74,17 @@ public class MqttInterface {
                 }
                 else if(topic.contentEquals("AD/server-UI/feedback"))
                 {
-
+                    String mssgFeedback;
+                    mssgFeedback = message.toString();
+                    String[] fbSplit = mssgFeedback.split(",");
+                    int parameter = Integer.parseInt(fbSplit[0]);
+                    float val = Float.parseFloat(fbSplit[1]);
+                    MainActivity.n.sendNotification(parameter, val);
                 }
-
+                else if(topic.contentEquals("AD/mbed-server/values"))
+                {
+                    MainActivity.model.setLiveValues(value);
+                    }
             }
 
             @Override

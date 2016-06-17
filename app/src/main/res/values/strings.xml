@@ -110,9 +110,17 @@ IBM Corp.
     <string name="title_activity_light">Light</string>
     <string name="title_activity_noise">Noise</string>
     <string name="title_activity_deskegg">Desk Egg</string>
+    <string name="temp_title">Temperature</string>
+    <string name="dust_title">Dust</string>
+    <string name="noise_title">Noise</string>
+    <string name="light_title">Light</string>
+    <string name="temp_live">25º</string>
+    <string name="dust_live">0.2</string>
+    <string name="noise_live">68</string>
+    <string name="light_live">89</string>
 
-
-
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

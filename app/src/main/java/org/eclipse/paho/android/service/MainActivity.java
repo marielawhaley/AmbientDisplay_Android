@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
     private String topic = "AD/#";
     Context context ;
     public static Model model;
+    public static Notification n;
 
     private static final int SWIPE_MIN_DISTANCE = 120;
     private static final int SWIPE_MAX_OFF_PATH = 250;
@@ -42,10 +43,16 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        model = new Model();
         setContentView(R.layout.activity_main);
         context = this.getApplicationContext();
+        n = new Notification();
+        n.getContext(context);
+        try {
+            wait(8000);  //Delay of 6 seconds
 
-        model = new Model();
+        } catch (Exception e) {
+        }
          MqttInterface mqtt = new MqttInterface(context);
         mqtt.MqttAction("Subscribe", topic, "null");
 
@@ -65,7 +72,7 @@ public class MainActivity extends Activity {
 
             } finally {
 
-                Intent i = new Intent(context, Temperature.class);
+                Intent i = new Intent(context, LiveValues.class);
                 startActivity(i);
                 finish();
             }

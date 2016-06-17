@@ -89,7 +89,7 @@ public class Light extends Activity {
                     //if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
                     // right to left swipe
                     if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(v) > SWIPE_THRESHOLD_VELOCITY) {
-                        Intent graphIntent = new Intent(context, Temperature.class);
+                        Intent graphIntent = new Intent(context, LiveValues.class);
                         startActivity(graphIntent);
 
                     } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(v) > SWIPE_THRESHOLD_VELOCITY) {

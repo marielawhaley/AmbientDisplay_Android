@@ -102,7 +102,7 @@ public class Temperature extends Activity {
                         startActivity(graphIntent);
 
                     } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(v) > SWIPE_THRESHOLD_VELOCITY) {
-                        Intent graphIntent = new Intent(context, Light.class);
+                        Intent graphIntent = new Intent(context, LiveValues.class);
                         startActivity(graphIntent);
                     }
                 } catch (Exception e) {
